@@ -6,5 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `exhibits`,
+        path: `${__dirname}/src/exhibits/`,
+      },
+    },
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
+  ],
 }
